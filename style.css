@@ -1,0 +1,248 @@
+/* Background Video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5); /* Efek sedikit gelap pada latar belakang */
+}
+
+/* Gaya Umum Body */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Taskbar */
+.taskbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.2); /* Transparan putih */
+    backdrop-filter: blur(2px); /* Sedikit blur */
+    z-index: 1000;
+    width: 100%;
+    box-sizing: border-box;
+}
+/* Styling untuk link menu */
+.menu a {
+    margin-left: 20px; /* Jarak antar tautan */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: #ffffff; /* Warna teks */
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .menu a:hover {
+    color: rgba(255, 255, 255, 0.3); /* Warna saat hover */
+  }
+/* Gambar Logo */
+/* .img {
+    margin-left: none;
+    height: 50px;
+} */
+
+/* Tombol Hamburger */
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+}
+/* Nav List */
+.nav-list {
+    display: none; /* Sembunyikan daftar nav secara default */
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Putih transparan */
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 200px; /* Lebar kotak nav */
+    transition: all 0.3s ease; /* Animasi transisi */
+}
+
+/* Menampilkan nav list ketika aktif */
+.nav-list.active {
+    display: block;
+}
+
+/* Style untuk link navigasi */
+.nav-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list ul li {
+    padding: 10px;
+}
+
+.nav-list ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+/* Hover effect */
+.nav-list ul li a:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Kotak Pencarian */
+.searchbox {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.3); /* Transparan putih */
+    color: white;
+    outline: none;
+    width: 200px;
+}
+
+.content-box-welcome {
+    margin: 80px 20px; /* Margin atas untuk memberi jarak dengan taskbar */
+    background-color: rgba(0, 0, 0, 0.2); /* Transparansi putih */
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 15px; /* Agar kotak terlihat lebih oval */
+    backdrop-filter: blur(2px); /* Sedikit blur */
+    transition: background-color 0.3s ease;
+}
+/* Kotak Konten dengan Transparansi Putih */
+.content-box {
+    background-color: rgba(0, 0, 0, 0.2); /* Transparansi putih */
+    backdrop-filter: blur(2px); /* Sedikit blur */
+    transition: background-color 0.3s ease;
+    margin: 0 20px;
+    margin-bottom: 10px; /* Mengurangi jarak antar konten */
+    padding: 20px; /* Memberikan sedikit ruang dalam setiap kotak konten */
+    border-radius: 15px; /* Agar kotak terlihat lebih oval */
+}
+.content3-h2 {
+    text-align: center;
+}
+
+/* Styling Kategori Produk */
+.categories {
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0, 0.3);
+}
+
+/* Menata kategori produk sebagai kotak tombol */
+.category-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category-item {
+    position: relative;
+    display: inline-block;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.category-checkbox {
+    display: none; /* Menyembunyikan checkbox */
+}
+
+.category-label {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.3); /* Transparan putih */
+    color: white;
+    padding: 10px 20px; /* Padding untuk membuatnya oval */
+    border-radius: 30px; /* Membuat bentuk lebih oval */
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap; /* Mencegah teks terpotong menjadi dua baris */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    max-width: fit-content; /* Menyesuaikan panjang dengan teks */
+}
+
+/* Hover dan Checked */
+.category-label:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Efek hover lebih cerah */
+    transform: scale(1.05); /* Efek zoom-in saat hover */
+}
+
+.category-checkbox:checked + .category-label {
+    background-color: rgba(0, 0, 0, 0.4); /* Warna saat kategori dipilih */
+    transform: scale(1.05); /* Efek zoom-in saat dipilih */
+}
+
+
+/* Slider */
+
+/* Menghilangkan thumb slider (tombol pemindah) */
+::-webkit-scrollbar {
+    width: 0px;  /* Menghilangkan scrollbar secara keseluruhan */
+    height: 0px; /* Menghilangkan scrollbar secara keseluruhan */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Membuat thumb slider transparan, sehingga tidak terlihat */
+    border-radius: 0px; /* Menghapus border-radius jika ada */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Menghilangkan track scrollbar */
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.product-slider {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+}
+
+.product-item {
+    flex: 0 0 auto;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparansi putih */
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 10px;
+    height: 50%;
+    object-fit: cover;
+}
+
+/* Efek Hover untuk Produk */
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
